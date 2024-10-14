@@ -106,14 +106,12 @@ def show_all(player, dealer):
 
 def player_busts(player, dealer):
     orange_color = "\033[1;31m"
-    green_color = "\033[1;32m"
     reset = "\033[0m"
     
     player.chips.lose_bet()  
     show_all(player, dealer)
     
     print(f"\n{orange_color}{player.name} BUSTS!{reset}")
-    print(f"\n{green_color}DEALER WINS!{reset}")
 
 def player_wins(player, dealer):
     green_color = "\033[1;32m"
@@ -136,13 +134,13 @@ def dealer_busts(player, dealer):
     print(f"\n{green_color}{player.name} WINS!{reset}")
 
 def dealer_wins(player, dealer):
-    green_color = "\033[1;32m"
+    orange_color = "\033[1;31m"
     reset = "\033[0m"
     
     player.chips.lose_bet()   
     show_all(player, dealer)
     
-    print(f"\n{green_color}DEALER WINS!{reset}")
+    print(f"\n{orange_color}{player.name} LOSES!{reset}")
 
 
 def push(player,dealer):
