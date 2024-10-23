@@ -1,6 +1,6 @@
 import random
-from card import Card
-from constants import suits, ranks
+from .card import Card
+from .constants import suits, ranks
 
 class Deck:
     def __init__(self):

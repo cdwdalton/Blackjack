@@ -1,4 +1,4 @@
-from constants import values
+from .constants import values
 
 class Card:
     def __init__(self, suit, rank):
